@@ -2,13 +2,15 @@
 
 ## Descrição do Projeto
 
-Este projeto é uma releitura inspirada no vídeo ["Using AI to NEVER LOSE in KAHOOT"](https://www.youtube.com/watch?v=G0i_xx-6G-4) do canal The [Coding Sloth no YouTube](https://www.youtube.com/@TheCodingSloth). Nossa versão traz algumas melhorias e adaptações:
+Este projeto é uma releitura inspirada no vídeo ["Using AI to NEVER LOSE in KAHOOT"](https://www.youtube.com/watch?v=G0i_xx-6G-4) do canal: [The Coding Sloth](https://www.youtube.com/@TheCodingSloth) no YouTube.
 
-- **Uso do Selenium**: Em vez de [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) + [Tesseract](https://pypi.org/project/pytesseract/) para obter questões e alternativas, utilizamos Selenium. Isso democratiza o acesso ao código, permitindo que funcione em qualquer resolução de tela, diferentemente da versão original que era limitada a telas 1440p.
+Essa versão traz algumas melhorias e adaptações:
 
-- **API Gemini**: Substituímos a API paga do ChatGPT pela API gratuita do Gemini. Você pode obter uma chave seguindo este [passo-a-passo](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br).
+- **Uso do Selenium**: Em vez de [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) + [Tesseract](https://pypi.org/project/pytesseract/) para obter questões e alternativas, o Selenium foi utilizado. Isso democratiza o acesso ao código, permitindo que funcione em qualquer resolução de tela, diferentemente da versão original que era limitada a telas 1440p.
 
-- **Automação com Selenium**: Para selecionar as alternativas corretas, usamos Selenium em vez de pyautogui, proporcionando maior precisão e confiabilidade.
+- **API Gemini**: Substituída a API paga do ChatGPT pela API gratuita do Gemini. Você pode obter uma chave seguindo este [passo-a-passo](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br).
+
+- **Automação com Selenium**: Para selecionar as alternativas corretas, o Selenium foi utilizado em vez de PyAutoGUI, proporcionando maior precisão e confiabilidade.
 
 **Nota**: Devido ao uso do Selenium, este código não pode ser executado em servidores sem interface gráfica.
 
