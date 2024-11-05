@@ -7,12 +7,11 @@ from input.url_chooser import URLChooser
 # Loading the environment variables in .env file
 load_dotenv()
 
+quiz_solver = GeminiQuizSolver()
 url = URLChooser.choose_url()
 
 browser = KahootBrowser()
 browser.go_to_quiz(url)
-
-quiz_solver = GeminiQuizSolver()
 
 
 def print_divider(char: str = "-", size: int = 40) -> None:
@@ -31,14 +30,17 @@ def print_intructions() -> None:
 def solve_quiz():
     try:
         questions_and_alternatives = browser.get_question_and_alternatives()
-        print(f"Question and alternatives:\n{questions_and_alternatives}")
+        print(f"Question and alternatives:\n\n{questions_and_alternatives}\n")
         guess = quiz_solver.solve_quiz(questions_and_alternatives)
-        print(f"AI guessed alternative #{guess}\n")
-        print(f"Clicking the alternative #{guess}\n")
+        guess_text = questions_and_alternatives.splitlines()[guess]
+        print(f"AI guessed alternative: {guess_text}")
+        print(f"Clicking the alternative: {guess_text}")
         browser.click_correct_alternative(guess)
         print_divider()
-    except:
+    except Exception as e:
         print("Can't solve the question :'(")
+        print(f"Error: {e}")
+        print_divider()
 
 
 try:

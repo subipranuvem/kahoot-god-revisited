@@ -6,7 +6,12 @@ from ai.env_var_keys import EnvironmentVarKey
 class GeminiQuizSolver:
     def __init__(self):
         genai.configure(api_key=os.environ[EnvironmentVarKey.GEMINI_API_KEY])
-        self._model = genai.GenerativeModel("gemini-1.5-flash")
+        model = "gemini-1.5-flash"
+        env_model = os.environ[EnvironmentVarKey.GEMINI_MODEL]
+        if env_model != "":
+            model = env_model
+        print(f"ai model loaded: {model}")
+        self._model = genai.GenerativeModel(model)
 
     def solve_quiz(self, question_and_alternatives: str) -> int:
         res = self._model.generate_content(
