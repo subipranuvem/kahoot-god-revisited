@@ -12,7 +12,32 @@ Essa versão traz algumas melhorias e adaptações:
 
 - **Automação com Selenium**: Para selecionar as alternativas corretas, o Selenium foi utilizado em vez de PyAutoGUI, proporcionando maior precisão e confiabilidade.
 
-**Nota**: Devido ao uso do Selenium, este código não pode ser executado em servidores sem interface gráfica.
+**Nota**: Devido ao uso do Selenium, este código **não pode ser executado em servidores sem interface gráfica**.
+
+## Instalando Dependências com pip e requirements.txt
+
+Para instalar todas as dependências listadas no arquivo `requirements.txt` de uma só vez, você pode usar o comando: `python -m pip install -r requirements.txt`. Este é um método bem eficiente e simples para configurar ambientes de desenvolvimento Python.
+
+1. Certifique-se de que você está no diretório do projeto onde o arquivo `requirements.txt` está localizado.
+1. Crie um ambiente virtual (pasta `.venv`) com o seguinte comando no terminal:
+    ```shell
+    python -m venv .venv
+    ```
+1. Ative seu ambiente virtual (se estiver usando um):
+    - Windows
+        ```shell
+        .\.venv\Scripts\activate.ps1
+        ```
+    - Ubuntu
+        ```shell
+        source .venv/bin/activate
+        ```
+1. Execute o seguinte comando no terminal:
+    ```
+    python -m pip install -r requirements.txt
+    ```
+1. O pip lerá o arquivo `requirements.txt` e instalará todas as dependências listadas nele.
+
 
 ## Variáveis de Ambiente
 
