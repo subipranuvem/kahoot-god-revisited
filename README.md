@@ -1,18 +1,16 @@
 # Kahoot God - Revisited
 
-## Descrição do Projeto
-
 Este projeto é uma releitura inspirada no vídeo ["Using AI to NEVER LOSE in KAHOOT"](https://www.youtube.com/watch?v=G0i_xx-6G-4) do canal: [The Coding Sloth](https://www.youtube.com/@TheCodingSloth) no YouTube.
 
 ![Imagem de demonstração do comportamento do código](./imgs/demo.gif "Demonstração")
 
 Essa versão traz algumas melhorias e adaptações:
 
-- **Uso do Selenium**: Em vez de [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) + [Tesseract](https://pypi.org/project/pytesseract/) para obter questões e alternativas, o Selenium foi utilizado. Isso democratiza o acesso ao código, permitindo que funcione em qualquer resolução de tela, diferentemente da versão original que era limitada a telas 1440p.
+- **Uso do Selenium**: Em vez do [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/) + [Tesseract](https://pypi.org/project/pytesseract/) para obter questões e alternativas, o Selenium foi utilizado. Isso democratiza o acesso ao código, permitindo que funcione em qualquer resolução de tela, diferentemente da versão original que era limitada a telas 1440p.
 
-- **API Gemini**: Substituída a API paga do ChatGPT pela API gratuita do Gemini. Você pode obter uma chave seguindo este [passo-a-passo](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br).
+- **Gemini**: Substituída a API paga do ChatGPT pela API gratuita do Gemini. Você pode obter uma chave seguindo este [passo-a-passo](https://ai.google.dev/gemini-api/docs/api-key?hl=pt-br).
 
-- **Automação com Selenium**: Para selecionar as alternativas corretas, o Selenium foi utilizado em vez de PyAutoGUI, proporcionando maior precisão e confiabilidade.
+- **Automação com Selenium**: Para selecionar a alternativa correta, o Selenium foi utilizado em vez do [PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/), proporcionando maior precisão e mais agilidade.
 
 **Nota**: Devido ao uso do Selenium, este código **não pode ser executado em servidores sem interface gráfica**. Outro ponto importante, para manter a simplicidade, você deve ter o [Chrome](https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform%3DDesktop) instalado.
 
