@@ -15,7 +15,7 @@ class GeminiQuizSolver:
             model = env_model
         print(f"ai model loaded: {model}")
         self._model = genai.GenerativeModel(model)
-        # Config to deisable safety settings
+        # Config to disable safety settings
         # Check documentation here: https://ai.google.dev/gemini-api/docs/safety-settings?hl=pt-br#code-examples
         self._safety_settings = {
             HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
