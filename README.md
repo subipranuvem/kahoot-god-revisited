@@ -2,6 +2,10 @@
 
 Este projeto é uma releitura inspirada no vídeo ["Using AI to NEVER LOSE in KAHOOT"](https://www.youtube.com/watch?v=G0i_xx-6G-4) do canal: [The Coding Sloth](https://www.youtube.com/@TheCodingSloth) no YouTube.
 
+**Veja o [vídeo no YouTube](https://youtu.be/4dv441aMSUw) de sobre como esse projeto foi feito!**
+
+_Demonstração do código em funcionamento_:
+
 ![Imagem de demonstração do comportamento do código](./imgs/demo.gif "Demonstração")
 
 Essa versão traz algumas melhorias e adaptações:
